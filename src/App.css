@@ -1,0 +1,86 @@
+nav, footer {
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  gap: 0.5em;
+}
+
+/*footer {
+  position: fixed;
+  bottom: 0;
+}*/
+
+.centralizado {
+  display: grid;
+  justify-items: center;
+  gap: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: solid 1px black;
+  padding: 0.25em;
+}
+
+.conteudo-formulario {
+  display: grid;
+  gap: 0.5em;
+  grid-template: auto / 5em 10em;
+}
+
+label {
+  text-align: right;
+}
+
+button {
+  padding: 0.5em;
+}
+
+.notificacao {
+  position: absolute;
+  /*top: 1em;*/
+  right: 1em;
+  border: solid 2px gray;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+}
+.nova-notificacao {
+  background-color: green;
+}
+.sem-borda {
+  background-color: transparent;
+  border: solid 0px gray;
+}
+.painel-de-notificacoes {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: solid 2px gray;
+  border-radius: 0.8em;
+  max-width: 20em;
+  max-height: 95vh;
+  padding: 0.5em;
+  background-color: white;
+}
+
+.atras-do-painel {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
