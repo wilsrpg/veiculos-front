@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { cores, Veiculo } from './PaginaInicial';
 
 export default function EditandoVeiculo() {
@@ -9,7 +9,7 @@ export default function EditandoVeiculo() {
   const [enviando, setEnviando] = useState(false);
 
   useEffect(() => {
-    document.title = 'Editando veículo';
+    document.title = 'Editando veículo - Veículos';
 
     const request = {
       method: 'GET',
