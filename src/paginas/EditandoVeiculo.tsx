@@ -9,7 +9,7 @@ export default function EditandoVeiculo() {
   const [enviando, setEnviando] = useState(false);
 
   useEffect(() => {
-    document.title = 'Editando veículo';
+    document.title = 'Editando veículo - Veículos';
 
     const request = {
       method: 'GET',

@@ -19,7 +19,7 @@ export const cores = [
 
 export default function PaginaInicial() {
   useEffect (()=> {
-    document.title = 'Página inicial';
+    document.title = 'Página inicial - Veículos';
   }, [])
 
   return (

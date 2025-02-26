@@ -6,7 +6,7 @@ export default function ListaDeVeiculos() {
   const [veiculos, setVeiculos] = useState<Veiculo[]>();
 
   useEffect (() => {
-    document.title = 'Lista de veículos';
+    document.title = 'Lista de veículos - Veículos';
     
     const request = {
       method: 'GET',

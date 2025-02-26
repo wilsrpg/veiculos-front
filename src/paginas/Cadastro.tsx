@@ -5,7 +5,7 @@ export default function Cadastro() {
   const [enviando, setEnviando] = useState(false);
 
   useEffect(() => {
-    document.title = 'Cadastro de Veículos';
+    document.title = 'Cadastrando veículo - Veículos';
   }, [])
 
   function cadastrar(e: React.FormEvent<HTMLFormElement>) {

@@ -9,7 +9,7 @@ export default function InformacoesDoVeiculo() {
   const historico = useHistory();
 
   useEffect(()=>{
-    document.title = 'Informações do veículo';
+    document.title = 'Informações do veículo - Veículos';
 
     const request = {
       method: 'GET',
