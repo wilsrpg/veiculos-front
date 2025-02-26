@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { cores, Veiculo } from './PaginaInicial';
 
 export default function EditandoVeiculo() {
@@ -7,6 +7,7 @@ export default function EditandoVeiculo() {
   const [veiculo, setVeiculo] = useState<Veiculo>();
   const {id} = useParams<{id: string}>();
   const [enviando, setEnviando] = useState(false);
+  const historico = useHistory();
 
   useEffect(() => {
     document.title = 'Editando veículo - Veículos';
@@ -45,8 +46,10 @@ export default function EditandoVeiculo() {
     .then(resp => {
       if (resp.erros || resp.error)
         alert('Falha ao salvar informações do veículo:'+(resp.erros.map((e: string) => '\n'+e) ?? resp.error));
-      else
+      else {
         alert('Informações do veículo atualizadas com sucesso.');
+        historico.push('/veiculos/' + id);
+      }
     })
     .catch(e => alert('Falha na comunicação com o servidor.'))
     .finally(() => setEnviando(false));
