@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Notificacao from "./Notificacao";
+//import Notificacao from "./Notificacao";
 
 export default function BarraSuperior() {
   return (

@@ -27,7 +27,7 @@ export default function ListaDeVeiculos() {
 
   return (
     <div className='centralizado'>
-      <h2>Catálogo de veículos</h2>
+      <h2>Lista de veículos</h2>
       {aguardandoServidor
         ? <span>Buscando dados no servidor...</span>
         : veiculos == undefined
