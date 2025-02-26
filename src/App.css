@@ -46,6 +46,11 @@ button {
   padding: 0.5em;
 }
 
+.botoes {
+  display: flex;
+  gap: 0.5em;
+}
+
 .notificacao {
   position: absolute;
   /*top: 1em;*/

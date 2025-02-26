@@ -86,7 +86,7 @@ export default function EditandoVeiculo() {
                 <input id="renavam" name="renavam" pattern='[0-9]{11}' required defaultValue={veiculo.renavam}/>
               </div>
 
-              <div>
+              <div className="botoes">
                 <button type='button' onClick={() => history.back()}>Voltar</button>
                 <button type="submit" disabled={enviando}>Salvar</button>
               </div>

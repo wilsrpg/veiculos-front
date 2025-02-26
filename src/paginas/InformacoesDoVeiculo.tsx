@@ -63,7 +63,7 @@ export default function InformacoesDoVeiculo() {
               <p>Ano: {veiculo.ano}</p>
               <p>Placa: {veiculo.placa}</p>
               <p>RENAVAM: {veiculo.renavam}</p>
-              <div>
+              <div className="botoes">
                 <Link to={'/veiculos/editar/' + veiculo.id}><button>Editar</button></Link>
                 <button onClick={excluir}>Excluir</button>
               </div>
