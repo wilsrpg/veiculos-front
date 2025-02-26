@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { cores } from './PaginaInicial';
+import { useHistory } from 'react-router-dom';
 
 export default function Cadastro() {
   const [enviando, setEnviando] = useState(false);
+  const historico = useHistory();
 
   useEffect(() => {
     document.title = 'Cadastrando veículo - Veículos';
@@ -26,8 +28,10 @@ export default function Cadastro() {
     .then(resp => {
       if (resp.erros || resp.error)
         alert('Falha ao cadastrar veículo:'+(resp.erros.map((e: string) => '\n'+e) ?? resp.error));
-      else
+      else {
         alert('Veículo cadastrado com sucesso.');
+        historico.push('/veiculos/' + resp.id);
+      }
     })
     .catch(e => alert('Falha na comunicação com o servidor.'))
     .finally(() => setEnviando(false));
