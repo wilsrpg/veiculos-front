@@ -62,7 +62,9 @@ export default function Cadastro() {
           <input id="ano" name="ano" type='number' min={1900} max={new Date(Date.now()).getFullYear()} required/>
 
           <label htmlFor="placa">Placa:</label>
-          <input id="placa" name="placa" pattern='[a-zA-Z]{3}[0-9][a-zA-Z0-9][0-9]{2}' required/>
+          <input id="placa" name="placa" required
+            pattern='(?!...0000)(?!...0[a-zA-Z]00)[a-zA-Z]{3}[0-9][a-zA-Z0-9][0-9]{2}'
+          />
 
           <label htmlFor="renavam">Renavam:</label>
           <input id="renavam" name="renavam" pattern='[0-9]{11}' required/>
